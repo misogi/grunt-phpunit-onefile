@@ -1,0 +1,23 @@
+{
+  "name": "grunt-phpunit-onefile",
+  "version": "0.0.9",
+  "description": "run phpunit one file",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misogi/grunt-phpunit-onefile.git"
+  },
+  "keywords": [
+    "phpunit",
+    "este-watch"
+  ],
+  "author": "misogi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misogi/grunt-phpunit-onefile/issues"
+  },
+  "homepage": "https://github.com/misogi/grunt-phpunit-onefile"
+}
