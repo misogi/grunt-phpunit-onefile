@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/misogi/grunt-phpunit-onefile/issues"
   },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-este-watch": "^0.1.18",
+    "grunt-notify": "^0.4.1",
+    "grunt-contrib-jshint": "~0.1.1"
+  },
   "homepage": "https://github.com/misogi/grunt-phpunit-onefile"
 }
