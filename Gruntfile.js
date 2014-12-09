@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    phpunit-onefile: {
+    phpunitOnefile: {
       classes: {
         dir: './tests/'
       },
@@ -19,4 +19,5 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-este-watch');
+  grunt.registerTask('default', ['esteWatch']);
 };
