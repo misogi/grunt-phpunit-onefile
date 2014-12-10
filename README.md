@@ -23,20 +23,31 @@ grunt.registerTask('default', ['esteWatch']);
 Configuration
 =============
 
+This module depends on (grunt-este-watch)[https://github.com/steida/grunt-este-watch]
+
 ```js
 grunt.initConfig({
+  esteWatch: {
+    options: {
+      dirs: [
+        'src/**/',
+        'tests/**/'
+      ]
+    },
+    php: function (filepath) {
+      grunt.config(['phpunitOnefile', 'filepath'], filepath);
+      return ['phpunitOnefile'];
+    }
+  },
   phpunitOnefile: {
     options: {
       bin: 'vendor/bin/phpunit',
       dirmap: [
-        { from: 'src/', to: 'tests/'},
-        {
-          from: 'module/Application/src/Application',
-          to: 'tests/ApplicationTest'
-        }
+        { from: 'src/', to: 'tests/'}
       ]
     }
   }
+  // ....
 ```
 
 'dirmap' replaces directory path.
