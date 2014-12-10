@@ -1,0 +1,12 @@
+{
+    "name": "misogi/grunt-phpunit-onefile",
+    "authors": [
+        {
+            "name": "misogi",
+            "email": "dev@misogi.info"
+        }
+    ],
+    "require": {
+      "phpunit/phpunit": "~4.4"
+    }
+}
