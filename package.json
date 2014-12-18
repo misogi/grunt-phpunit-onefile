@@ -1,6 +1,6 @@
 {
   "name": "grunt-phpunit-onefile",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This watch changes on .php files and run phpunit one file",
   "main": "Gruntfile.js",
   "scripts": {

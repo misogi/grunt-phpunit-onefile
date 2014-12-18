@@ -1,6 +1,8 @@
 
 'use strict';
 
+var fs = require('fs')
+
 module.exports = function (grunt) {
 
   var exec = require('child_process').exec;
@@ -16,6 +18,10 @@ module.exports = function (grunt) {
     } else {
       grunt.log.write(stdout);
     }
+  }
+
+  var execTest = function execTest(err, fd) {
+
   }
 
   grunt.registerTask(
@@ -39,9 +45,16 @@ module.exports = function (grunt) {
         path = path.replace('.php', 'Test.php');
       }
 
-      var command = options.bin + " " + path;
-      grunt.log.ok(command);
+      fs.open(path, 'r', 444, function(err, fd){
+        if (err) {
+          return false;
+        }
 
-      exec(command, {}, logging);
+        var command = options.bin + " " + path;
+        grunt.log.ok(command);
+
+        exec(command, {}, logging);
+        return true;
+      });
   });
 }

@@ -17,7 +17,6 @@ module.exports = function(grunt) {
       php: function (filepath) {
         var conf = grunt.config('phpunitOnefile');
         conf.filepath = filepath
-        console.log(conf);
         grunt.config('phpunitOnefile', conf);
         return ['phpunitOnefile'];
       }
